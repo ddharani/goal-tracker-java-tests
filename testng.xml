@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Goals API Test suite" parallel="false">
+	
+	<test name="Data Validation tests" parallel="false">
+		<classes>
+			<class name="testcases.DataValidationTests" />		 
+		</classes>
+	</test>
+	
+	<test name ="Payload Format and other tests" parallel="false">
+		<classes>
+			<class name="testcases.HeadersAndContentTypeTests" />		
+			<class name="testcases.PayloadFormatTesting" />
+		</classes>		
+	</test>
+	
+	<test name ="Load and Performance Tests" parallel="false">
+		<classes>
+			<class name="testcases.LoadAndPeformanceTests" />		
+		</classes>		
+	</test>
+</suite>

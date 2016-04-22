@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Goals API Test suite]">
+  <test name="Data Validation tests">
+    <classes>
+      <class name="testcases.DataValidationTests"/>
+    </classes>
+  </test> <!-- Data Validation tests -->
+  <test name="Payload Format and other tests">
+    <classes>
+      <class name="testcases.HeadersAndContentTypeTests"/>
+      <class name="testcases.PayloadFormatTesting"/>
+    </classes>
+  </test> <!-- Payload Format and other tests -->
+  <test name="Load and Performance Tests">
+    <classes>
+      <class name="testcases.LoadAndPeformanceTests"/>
+    </classes>
+  </test> <!-- Load and Performance Tests -->
+  <test name="Payload Format and other tests(failed)">
+    <classes>
+      <class name="testcases.LoadAndPeformanceTests">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="setupURL"/>
+          <include name="getAllGoalsBeforePost"/>
+          <include name="beginTestSuite"/>
+          <include name="endTestSuite"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testcases.LoadAndPeformanceTests -->
+      <class name="testcases.PayloadFormatTesting">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="setupURL"/>
+          <include name="addAGoalWithNameContainingNullvalues"/>
+          <include name="addAGoalWithWegihtContainingDoubleValue"/>
+          <include name="addMoreThanOneGoalinAPostRequest"/>
+          <include name="addAGoalWithDuplicateFields"/>
+          <include name="addAGoalWithNotesContainingIntegerValue"/>
+          <include name="afterMethod"/>
+          <include name="addAGoalWithNameContainingOnlyNumeric"/>
+          <include name="addAGoalWithNotesContainingNullvalues"/>
+        </methods>
+      </class> <!-- testcases.PayloadFormatTesting -->
+      <class name="testcases.HeadersAndContentTypeTests">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="setupURL"/>
+          <include name="sendPostRequestToAWrongPath"/>
+          <include name="sendGetRequestToaWrongPath"/>
+          <include name="afterMethod"/>
+          <include name="sendGetRequestAndVerifyContentType"/>
+          <include name="sendPostRequestWithInvalidContentType"/>
+        </methods>
+      </class> <!-- testcases.HeadersAndContentTypeTests -->
+      <class name="testcases.DataValidationTests">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="setupURL"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testcases.DataValidationTests -->
+    </classes>
+  </test> <!-- Payload Format and other tests(failed) -->
+</suite> <!-- Failed suite [Goals API Test suite] -->
